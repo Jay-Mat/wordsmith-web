@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: wordsmith-web
-        image: dkfolefac/wordweb:19
+        image: jaymath237/wordsmith-web:latest
         resources:
           limits:
             memory: "128Mi"
