@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wordsmith-web
+spec:
+  selector:
+    matchLabels:
+      app: wordsmith-web
+  template:
+    metadata:
+      labels:
+        app: wordsmith-web
+    spec:
+      containers:
+      - name: wordsmith-web
+        image: dkfolefac/wordweb:19
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
