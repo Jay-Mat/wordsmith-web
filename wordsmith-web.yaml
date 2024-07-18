@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: wordsmith-web
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: wordsmith-web
