@@ -1,4 +1,0 @@
-name: wordsmith-web
-image: 
-  name: jaymath/wordsmith-web
-  tag: latest

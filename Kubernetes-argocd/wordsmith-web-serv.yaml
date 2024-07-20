@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Values.name}}
+  name: wordsmith-web
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
-      app: {{ .Values.name}}
+      app: wordsmith-web
   template:
     metadata:
       labels:
-        app: {{ .Values.name}}
+        app: wordsmith-web
     spec:
       containers:
-      - name: {{ .Values.name}}
-        image: {{ .Values.image.name }}: {{ .Values.image.tag }}
+      - name: wordsmith-web
+        image: jaymath237/wordsmith-web:latest
         resources:
           limits:
             memory: "128Mi"
